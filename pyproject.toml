@@ -1,7 +1,7 @@
 [project]
-name = "your_plugin"
+name = "hermes_plugin_<your_source>"
 version = "0.1.0"
-description = "HERMES plugin for your_source"
+description = "HERMES harvesting plugin for <your_source>"
 readme = "README.md"
 keywords = [ "publishing", "metadata", "automation"]
 requires-python = ">= 3.10"
