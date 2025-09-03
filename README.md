@@ -38,7 +38,7 @@ Make sure that you have a file named `hermes.toml` in your project with the foll
   <!-- TODO: Replace placeholder "your_source" in following code snippet -->
 ```toml
   [harvest]
-  sources = ["hermes_plugin_your_source"]
+  sources = ["your_source"]
 ```
 
 Run the `harvest` command:
