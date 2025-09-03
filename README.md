@@ -37,7 +37,7 @@ Make sure that you have a file named `hermes.toml` in your project with the foll
 
 ```
   [harvest]
-  sources = ["cff", "hermes_plugin_<your_source>"]
+  sources = ["hermes_plugin_<your_source>"]
 ```
 
 Run the `harvest` command:
