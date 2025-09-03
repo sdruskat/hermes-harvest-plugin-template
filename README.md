@@ -1,35 +1,29 @@
 # Getting started
 
-- Replace all placeholders (e.g. your_source, your_plugin) in all files and directory names.
-- Fill in all fields of the pyproject.toml (replace or remove the dummy data)
-- Describe your plugin in this file (down below)
-- Add licenses if desired
-- Now you are good to go, delete this section and start implementing.
+1. Update fields in [`pyproject.toml`](pyproject.toml): replace or remove dummy data, choose a build backend, etc.
+2. Replace all placeholders (e.g. `your_source`, `your_plugin`) in all files and directory names.
+3. Describe your plugin [below](#hermes-harvest-plugin-for-your_source).
+4. License your plugin: we recommend following the [REUSE specifications](https://reuse.software/tutorial/) and use of the [`reuse` tool](https://reuse.readthedocs.io/en/stable/).
+5. Delete this section and start implementing.
+6. When release-ready, [add your plugin](https://github.com/softwarepub/hermes/issues/new?template=add-plugin-to-marketplace.yml) to the [HERMES Marketplace](https://hermes.software-metadata.pub/en/latest/#plugins).
 
-# Hermes harvest plugin for your_source
-This plugin enables the harvesting of metadata stored in your_source.
+# Hermes harvest plugin for <your_source>
 
-## Authors
-
-- [@your_github_username](https://www.github.com/your_github_username)
+This plugin enables the harvesting of metadata stored in <your_source>.
 
 ## Related
 
-[The Github repository](https://github.com/hermes-hmc/hermes) of the hermes project
-
-[The Github repository](https://github.com/hermes-hmc/hermes-git) of the hermes harvest plugin for git
-
-[The Github repository](https://github.com/hermes-hmc/hermes-plugin-python) of the hermes harvest plugin for python projects
+- The Github [repository of the `hermes`](https://github.com/hermes-hmc/hermes) project
 
 ## Run Locally
 
-Install hermes e.g. using pip
+Install `hermes` e.g. using `pip`:
 
 ```bash
   pip install hermes
 ```
 
-<ins>**or**</ins> clone the Hermes project, go to the project directory and make a python package out of it
+<ins>**or**</ins> clone the `hermes` project, go to the project directory and install `hermes`:
 
 ```bash
   git clone https://github.com/hermes-hmc/hermes.git
@@ -37,7 +31,7 @@ Install hermes e.g. using pip
   pip install .
 ```
 
-Clone this project, go to the project directory and make a python package out of it
+Clone this project, go to the project directory and install this project:
 
 ```bash
   git clone link_to_your_repository
@@ -45,27 +39,25 @@ Clone this project, go to the project directory and make a python package out of
   pip install .
 ```
 
-Go to the project folder you want to harvest
+Go to the project folder you want to harvest:
 
 ```bash
   cd your_project_to_harvest
 ```
 
-Controll that you have a file named "hermes.toml" in your project with the following content.
+Make sure that you have a file named `hermes.toml` in your project with the following content:
+
 ```
   [harvest]
-  sources = ["cff", "your_plugin"]
-
-  [deposit.invenio_rdm]
-  site_url = "https://sandbox.zenodo.org"
-  access_right = "open"
+  sources = ["cff", "hermes_plugin_<your_source>"]
 ```
 
-Run harvest command
+Run the `harvest` command:
 
 ```bash
   hermes harvest
 ```
 
-![Logo](https://docs.software-metadata.pub/en/latest/_static/hermes-visual-blue.svg)
+The harvested metadata from <your_source> is stored in the local cache at `.hermes/harvest/`.
 
+![HERMES logo](https://software-metadata.pub/hermes-logo.png)
