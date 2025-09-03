@@ -1,5 +1,5 @@
 [project]
-name = "hermes_plugin_<your_source>"  # TODO: Replace placeholder
+name = "hermes_plugin_your_source"  # TODO: Replace placeholder "your_source"
 version = "0.1.0"
 description = "HERMES harvesting plugin for <your_source>"  # TODO: Replace placeholder
 readme = "README.md"
@@ -9,11 +9,11 @@ classifiers = [ "Development Status :: 1 - Planning", "Environment :: Plugins", 
 dependencies = [ "hermes>=0.9.0" ]
 
 authors = [
-    { name = "You", email = "you@email.com" }  # TODO: Replace placeholder
+    { name = "You", email = "you@email.com" }  # TODO: Replace placeholders
 ]
 
 [project.entry-points."hermes.harvest"]
-<your_source> = "hermes_plugin_<your_source>.harvest:YourHarvestPlugin"  # TODO: Replace placeholder
+your_source = "hermes_plugin_your_source.harvest:YourHarvestPlugin"  # TODO: Replace placeholders ("your_source"; "YourHarvestPlugin")
 
 [build-system]
 requires = ["setuptools>=61"]

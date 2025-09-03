@@ -35,10 +35,10 @@ Go to the project folder you want to harvest:
 
 Make sure that you have a file named `hermes.toml` in your project with the following content:
 
-  <!-- TODO: Replace placeholder in following code snippet -->
+  <!-- TODO: Replace placeholder "your_source" in following code snippet -->
 ```toml
   [harvest]
-  sources = ["hermes_plugin_<your_source>"]
+  sources = ["hermes_plugin_your_source"]
 ```
 
 Run the `harvest` command:
