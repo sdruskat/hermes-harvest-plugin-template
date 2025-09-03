@@ -17,25 +17,13 @@ This plugin enables the harvesting of metadata stored in <your_source>.
 
 ## Run Locally
 
-Install `hermes` e.g. using `pip`:
-
-```bash
-  pip install hermes
-```
-
-<ins>**or**</ins> clone the `hermes` project, go to the project directory and install `hermes`:
-
-```bash
-  git clone https://github.com/hermes-hmc/hermes.git
-  cd hermes
-  pip install .
-```
-
 Clone this project, go to the project directory and install this project:
 
 ```bash
   git clone link_to_your_repository
   cd your_folder
+  
+  # Recommended: Create a virtual environment to install into
   pip install .
 ```
 
