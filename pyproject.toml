@@ -12,6 +12,9 @@ authors = [
     { name = "You", email = "you@email.com" }  # TODO: Replace placeholders
 ]
 
+[project.urls]
+Repository = "link_to_your_repository"  # TODO: Replace placeholder ("link_to_your_repository")
+
 [project.entry-points."hermes.harvest"]
 your_source = "hermes_plugin_your_source.harvest:YourHarvestPlugin"  # TODO: Replace placeholders ("your_source"; "YourHarvestPlugin")
 
