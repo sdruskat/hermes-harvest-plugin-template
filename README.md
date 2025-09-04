@@ -19,6 +19,7 @@ This plugin enables the harvesting of metadata stored in <your_source>.  <!-- TO
 
 Clone this project, go to the project directory and install this project:
 
+<!-- TODO: Replace "link_to_your_repository" with the actual link in following code snippet -->
 ```bash
   git clone link_to_your_repository
   cd your_folder
