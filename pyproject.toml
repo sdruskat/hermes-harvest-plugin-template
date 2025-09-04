@@ -1,29 +1,23 @@
-[build-system]
-requires = [ "setuptools >= 70.1.1",]
-build-backend = "setuptools.build_meta"
-
 [project]
-name = "your_plugin"
-version = "0.0.0"
+name = "hermes_plugin_your_source"  # TODO: Replace placeholder "your_source"
+version = "0.1.0"
+description = "HERMES harvesting plugin for <your_source>"  # TODO: Replace placeholder
 readme = "README.md"
-description = "HERMES plugin for your_source"
-keywords = [ "publishing", "metadata", "automation",]
+keywords = [ "publishing", "metadata", "automation"]
 requires-python = ">= 3.10"
-classifiers = [ "Development Status :: 1 - Planning", "Environment :: Plugins", "Programming Language :: Python :: 3",]
-dependencies = [ "hermes>=0.9.0",]
-authors = [
-    {name = "your_name", email = "your@email.address"}
-]
-license = "Apache-2.0"
+classifiers = [ "Development Status :: 1 - Planning", "Environment :: Plugins", "Programming Language :: Python :: 3" ]
+dependencies = [ "hermes>=0.9.0" ]
 
-[project.optional-dependencies]
-dev = [ "pytest>=8.2.2", "pytest-cov>=3.0.0", "taskipy>=1.10.3", "flake8>=5.0.4", "reuse>=1.1.2",]
+authors = [
+    { name = "You", email = "you@email.com" }  # TODO: Replace placeholders
+]
 
 [project.urls]
-Repository = "link_to_your_repository"
+Repository = "link_to_your_repository"  # TODO: Replace placeholder ("link_to_your_repository")
 
-[tool.setuptools]
-packages = [ "your_plugin",]
+[project.entry-points."hermes.harvest"]
+your_source = "hermes_plugin_your_source.harvest:YourHarvestPlugin"  # TODO: Replace placeholders ("your_source"; "YourHarvestPlugin")
 
-[tool.setuptools.package-dir]
-"" = "src"
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
