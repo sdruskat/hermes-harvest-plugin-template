@@ -4,8 +4,9 @@
 2. Replace all placeholders (e.g. `<your_source>`, etc.) in all files and directory names.
 3. Describe your plugin [below](#hermes-harvest-plugin-for-your_source).
 4. License your plugin: we recommend following the [REUSE specifications](https://reuse.software/tutorial/) and use of the [`reuse` tool](https://reuse.readthedocs.io/en/stable/).
-5. Delete this section and start implementing.
-6. When release-ready, [add your plugin](https://github.com/softwarepub/hermes/issues/new?template=add-plugin-to-marketplace.yml) to the [HERMES Marketplace](https://hermes.software-metadata.pub/en/latest/#plugins).
+5. Update fields in [`CITATION.cff`](CITATION.cff): replace or remove dummy data
+6. Delete this section and start implementing.
+7. When release-ready, [add your plugin](https://github.com/softwarepub/hermes/issues/new?template=add-plugin-to-marketplace.yml) to the [HERMES Marketplace](https://hermes.software-metadata.pub/en/latest/#plugins).
 
 # Hermes harvest plugin for <your_source>  <!-- TODO: Replace placeholder -->
 
