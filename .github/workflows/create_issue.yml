@@ -1,0 +1,37 @@
+name: Publish plugin to the HERMES Marketplace
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  create_issue:
+    name: Create "Add plugin to marketplace" issue
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - name: Create "Add plugin to marketplace" issue
+        run: gh issue --repo ${{ github.repository }} create --title "$TITLE" --body "$BODY"
+        env: 
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TITLE: Add plugin to marketplace
+          BODY: |
+            Thanks for creating a HERMES harvest plugin!
+
+            To make HERMES a more user friendly project you can submit your plugin to the [HERMES Marketplace](https://hermes.software-metadata.pub/en/latest/#plugins).
+            This way other users can use your plugin too and the set of harvestable metadata sources grows for all of us!
+
+            In order for your plugin to be published on the marketplace create an issue using [this template]( https://github.com/softwarepub/hermes/issues/new?template=add-plugin-to-marketplace.yml).
+  delete_workflow:
+    name: Delete this run-once workflow
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - name: Delete this run-once workflow
+        run: gh workflow --repo ${{ github.repository }} disable "Publish plugin to the HERMES Marketplace"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
